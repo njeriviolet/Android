@@ -5,4 +5,6 @@ const val ROUT_DETAIL="details"
 const val ROUT_ABOUT="about"
 const val ROUT_SPLASH="splash"
 const val ROUT_PROPERTY="property"
+const val ROUT_INTENT="intent"
+
 //".." contains the package name
