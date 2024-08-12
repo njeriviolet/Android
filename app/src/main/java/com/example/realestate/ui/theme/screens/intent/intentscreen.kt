@@ -208,7 +208,7 @@ fun intentscreen(navController: NavController){
                         shape = CutCornerShape(5.dp),
                         border = BorderStroke(3.dp, Color.Black)
                     ) {
-                        Text(text = "PAY VIA MPESA")
+                        Text(text = "STK")
 
                     }
 
@@ -235,24 +235,7 @@ fun intentscreen(navController: NavController){
 
                     Spacer(modifier = Modifier.height(20.dp))
 
-                    //SHARE
-                    Button(onClick = {
-                        val shareIntent=Intent(Intent.ACTION_SEND)
-                        shareIntent.type="text/plain"
-                        shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out this is a cool content")
-                        mContext.startActivity(Intent.createChooser(shareIntent, "Share"))
-                    },
-                        modifier = Modifier
-                            .size(width = 380.dp, height = 70.dp)
-                            .fillMaxWidth()
-                            .padding(start = 20.dp, end = 20.dp, top = 20.dp),
-                        shape = CutCornerShape(5.dp),
-                        colors = ButtonDefaults.buttonColors(Color.Black)
-                    ) {
-                        Text(text = "SHARE")
-                    }
 
-                    Spacer(modifier = Modifier.height(20.dp))
 
 
                     //CALL
