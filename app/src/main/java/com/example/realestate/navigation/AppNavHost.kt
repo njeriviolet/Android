@@ -7,10 +7,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.realestate.ui.theme.screens.about.AboutScreen
+import com.example.realestate.ui.theme.screens.dashboard.DashboardScreen
 import com.example.realestate.ui.theme.screens.details.detail
 import com.example.realestate.ui.theme.screens.home.HomeScreen
 import com.example.realestate.ui.theme.screens.intent.intentscreen
+import com.example.realestate.ui.theme.screens.login.LoginScreen
 import com.example.realestate.ui.theme.screens.property.propertyscreen
+import com.example.realestate.ui.theme.screens.signup.SignupScreen
 import com.example.realestate.ui.theme.screens.splash.splashscreen
 
 @Composable
@@ -44,6 +47,17 @@ fun AppNavHost(
         composable(ROUT_INTENT) {
             intentscreen(navController = navController)
         }
+        composable(ROUT_SIGNUP) {
+            SignupScreen(navController = navController)
+        }
+        composable(ROUT_LOGIN) {
+            LoginScreen(navController = navController)
+        }
+        composable(ROUT_DASHBOARD) {
+            DashboardScreen(navController = navController)
+        }
+
+
 
 
 

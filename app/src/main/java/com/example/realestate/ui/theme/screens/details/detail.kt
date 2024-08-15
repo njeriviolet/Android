@@ -228,7 +228,7 @@ fun detail(navController: NavController){
 
         }
 
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(modifier = Modifier.height(5.dp))
 
 
             Button(onClick = { navController.navigate(ROUT_INTENT) },

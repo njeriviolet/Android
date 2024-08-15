@@ -24,10 +24,12 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.Face
 import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
@@ -79,6 +81,7 @@ fun intentscreen(navController: NavController){
 
 
     Column(modifier = Modifier.fillMaxSize()) {
+        val mContext = LocalContext.current
 
         var selected by remember { mutableIntStateOf(0) }
         Scaffold(
@@ -176,8 +179,12 @@ fun intentscreen(navController: NavController){
                                Icon(imageVector = Icons.Default.Star, contentDescription = "favourite", modifier = Modifier.size(30.dp))
                                Icon(imageVector = Icons.Default.Star, contentDescription = "favourite", modifier = Modifier.size(30.dp))
                            }
+
+
                            Text(text = "57,780 reviews")
-                           Button(onClick = { /*TODO*/ },
+                           Button(onClick = { val  callIntent=Intent(Intent.ACTION_DIAL)
+                               callIntent.data="tel:0720245837".toUri()
+                               mContext.startActivity(callIntent)  },
                                colors = ButtonDefaults.buttonColors(lightbrown),
                                shape = RoundedCornerShape(10.dp)
 
@@ -343,8 +350,8 @@ val bottomNavItems = listOf(
     BottomNavItem(
         title = "Signup",
         route="signup",
-        selectedIcon= Icons.Filled.Face,
-        unselectedIcon= Icons.Outlined.Face,
+        selectedIcon= Icons.Filled.Info,
+        unselectedIcon= Icons.Outlined.Info,
         hasNews = true,
         badges=1
     ),
