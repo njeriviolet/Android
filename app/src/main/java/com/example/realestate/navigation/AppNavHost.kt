@@ -12,6 +12,8 @@ import com.example.realestate.ui.theme.screens.details.detail
 import com.example.realestate.ui.theme.screens.home.HomeScreen
 import com.example.realestate.ui.theme.screens.intent.intentscreen
 import com.example.realestate.ui.theme.screens.login.LoginScreen
+import com.example.realestate.ui.theme.screens.products.AddProductsScreen
+import com.example.realestate.ui.theme.screens.products.ViewProductsScreen
 import com.example.realestate.ui.theme.screens.property.propertyscreen
 import com.example.realestate.ui.theme.screens.signup.SignupScreen
 import com.example.realestate.ui.theme.screens.splash.splashscreen
@@ -55,6 +57,12 @@ fun AppNavHost(
         }
         composable(ROUT_DASHBOARD) {
             DashboardScreen(navController = navController)
+        }
+        composable(ADD_PRODUCTS_URL) {
+            AddProductsScreen(navController = navController)
+        }
+        composable(VIEW_PRODUCTS_URL) {
+            ViewProductsScreen(navController = navController)
         }
 
 

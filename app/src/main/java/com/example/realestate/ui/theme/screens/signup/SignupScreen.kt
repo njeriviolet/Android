@@ -121,7 +121,7 @@ fun SignupScreen(navController: NavController){
 
 
         OutlinedTextField(value = confpassword,
-            onValueChange = {name = confpassword } ,
+            onValueChange = {confpassword =it} ,
             label = { Text("confirm password")},
             modifier = Modifier
                 .fillMaxWidth()

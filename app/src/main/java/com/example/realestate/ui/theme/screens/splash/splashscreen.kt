@@ -20,6 +20,7 @@ import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.realestate.R
+import com.example.realestate.navigation.ROUT_DASHBOARD
 import com.example.realestate.navigation.ROUT_LOGIN
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

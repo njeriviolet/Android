@@ -33,10 +33,12 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.realestate.R
+import com.example.realestate.navigation.ADD_PRODUCTS_URL
 import com.example.realestate.navigation.ROUT_DETAIL
 import com.example.realestate.navigation.ROUT_HOME
 import com.example.realestate.navigation.ROUT_INTENT
 import com.example.realestate.navigation.ROUT_PROPERTY
+import com.example.realestate.navigation.VIEW_PRODUCTS_URL
 import com.example.realestate.ui.theme.babyblue
 
 
@@ -247,6 +249,7 @@ fun DashboardScreen(navController: NavController){
                 Row (modifier = Modifier.padding(20.dp)){
                     //Card5
                     Card(modifier = Modifier
+                        .clickable { navController.navigate(ADD_PRODUCTS_URL) }
                         .height(180.dp)
                         .width(160.dp)) {
                         Column {
@@ -266,7 +269,7 @@ fun DashboardScreen(navController: NavController){
                             Spacer(modifier = Modifier.height(15.dp))
 
                             Text(
-                                text = "SETTINGS " ,
+                                text = "ADD PRODUCTS " ,
                                 fontSize = 15.sp ,
                                 color = Color.Black,
                                 modifier = Modifier.fillMaxWidth(),
@@ -283,6 +286,7 @@ fun DashboardScreen(navController: NavController){
 
                     //Card6
                     Card(modifier = Modifier
+                        .clickable { navController.navigate(VIEW_PRODUCTS_URL) }
                         .height(180.dp)
                         .width(160.dp)) {
                         Column {
@@ -302,7 +306,7 @@ fun DashboardScreen(navController: NavController){
                             Spacer(modifier = Modifier.height(15.dp))
 
                             Text(
-                                text = "HOME " ,
+                                text = "VIEW PRODUCTS. " ,
                                 fontSize = 15.sp ,
                                 color = Color.Black,
                                 modifier = Modifier.fillMaxWidth(),

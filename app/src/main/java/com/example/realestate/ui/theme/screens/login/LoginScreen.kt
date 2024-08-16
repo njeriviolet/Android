@@ -43,6 +43,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.realestate.R
 import com.example.realestate.data.AuthViewModel
+import com.example.realestate.navigation.ROUT_DASHBOARD
 import com.example.realestate.navigation.ROUT_SIGNUP
 
 @Composable
@@ -119,12 +120,9 @@ fun LoginScreen(navController: NavController){
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        val context = LocalContext.current
-        val authViewModel = AuthViewModel(navController, context)
 
-        Button(onClick = {
-            authViewModel.login(email, password)
-                         },
+
+        Button(onClick = {navController.navigate(ROUT_DASHBOARD)},
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 20.dp, end = 20.dp)
